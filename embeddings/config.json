@@ -1,0 +1,20 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "output_directory": "data/vector_db/chroma_db",
+  "data_sources": [
+    {
+      "type": "sqlite",
+      "path": "data/news/news.db",
+      "query": "SELECT headline, summary, source_name, sentiment, published_at, url FROM articles",
+      "columns": [
+        "headline",
+        "summary",
+        "source_name",
+        "sentiment",
+        "published_at",
+        "url"
+      ],
+      "template": "News Headline: {headline}. Summary: {summary}. (Source: {source_name}, Sentiment: {sentiment}, Published: {published_at})"
+    }
+  ]
+}
