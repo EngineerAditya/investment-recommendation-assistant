@@ -147,7 +147,7 @@ cd investment-recommendation-assistant
 ```
 
 #### 2. Install Ollama (Required)
-Visit [https://ollama.ai/download](https://ollama.ai/download) and install Ollama for your platform.
+Visit [https://ollama.com/download](https://ollama.com/download) and install Ollama for your platform.
 
 Then pull the required model:
 ```bash
@@ -475,7 +475,7 @@ pip install -r requirements.txt
 # Check if Ollama is installed
 ollama list
 
-# If not installed, visit https://ollama.ai/download
+# If not installed, visit https://ollama.com/download
 
 # Check if service is running
 ollama serve
@@ -505,9 +505,9 @@ python data-scrapers/fetch_news.py
 **Solutions**:
 ```bash
 # Check if .env file exists with API key
-cat .env
+grep WORLDNEWSAPI_KEY .env
 
-# Should contain:
+# Should output:
 # WORLDNEWSAPI_KEY=your_key_here
 
 # Scrape fresh news
